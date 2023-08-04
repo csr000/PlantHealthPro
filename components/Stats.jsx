@@ -12,10 +12,11 @@ const Stats = () => {
     if (inView) {
       animation.start({
         y: 0,
+        opacity: 1,
         transition: { type: "spring", duration: 1, bounce: 0.5 },
       });
     } else {
-      animation.start({ y: "100px" });
+      animation.start({ y: "100px", opacity: 0 });
     }
   }, [inView, animation]);
 
